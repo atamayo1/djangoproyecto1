@@ -1,4 +1,8 @@
 
+## Command for create a project with django framework
+
+    django-admin startproject mysite
+
 ## First clone the project with git
 
     git clone [url]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    {% include "menu/menu.html" %}
+    <h1 style="color: darkred;">
+        Hola esta es mi primera plantilla
+    </h1>
+    <p style="color: black;">
+        El nombre completo del creador de la plantilla es: {{nombre_persona.upper}} {{apellido_persona.upper}}
+    </p>
+    <p style="color: black;">
+        Fecha actual (dd/mm/yyyy):  {{fecha_actual.day}}/{{fecha_actual.month}}/{{fecha_actual.year}}
+    </p>
+    <p>
+        <strong>Temas del curso:</strong>
+    </p>
+    <p>
+        <ul>
+            {% if teams %}
+                {% for element in teams %}
+                    <li>{{element|first}}</li>
+                {% endfor %}
+            {% else %}
+                <p>No hay elementos para mostrar</p>
+            {% endif %}
+        </ul>
+    </p>
+</body>
+</html>
